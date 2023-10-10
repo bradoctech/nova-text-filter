@@ -14,6 +14,7 @@
                 @change="handleChange"
                 :options="[]"
                 label="name"
+                :maxlength="maxlength"
             />
         </div>
     </div>
@@ -57,6 +58,10 @@ export default {
 
         value() {
             return this.filter.currentValue
+        },
+
+        maxlength() {
+            return this.filter.maxlength || 524288
         },
     },
 }

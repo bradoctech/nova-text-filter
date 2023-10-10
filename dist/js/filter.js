@@ -261,6 +261,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: {
@@ -295,6 +296,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         },
         value: function value() {
             return this.filter.currentValue;
+        },
+        maxlength: function maxlength() {
+            return this.filter.maxlength || 524288;
         }
     }
 });
@@ -323,7 +327,8 @@ var render = function() {
           type: "text",
           placeholder: _vm.placeholder,
           options: [],
-          label: "name"
+          label: "name",
+          maxlength: _vm.maxlength
         },
         domProps: { value: _vm.value },
         on: { change: _vm.handleChange }
